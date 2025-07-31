@@ -72,7 +72,7 @@ function App() {
   return (
     <Container maxWidth={false} sx={{
       mt: 4,
-      bgcolor: "#fff", // white background
+      bgcolor: "#fff",
       minHeight: "100vh",
       pb: 4,width: "100%",
 
