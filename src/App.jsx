@@ -78,7 +78,7 @@ function App() {
 
     }}>
       <Grid container spacing={3}>
-        <Grid item xs={6} md={4}>
+        <Grid item xs={4} md={2}>
           <Box sx={{ p: 2, bgcolor: "#f5f5f5", borderRadius: 1 }}>
             <FormControl fullWidth sx={{ mb: 2 }}>
               <InputLabel id="product-select-label">Item</InputLabel>
@@ -131,7 +131,7 @@ function App() {
           </Box>
         </Grid>
 
-        <Grid item xs={6} md={8}>
+        <Grid item xs={6} md={10}>
           <QuotationTable
             data={dataItems}
             deleteByIndex={deleteByIndex}

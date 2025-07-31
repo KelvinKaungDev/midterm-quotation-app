@@ -33,8 +33,8 @@ function QuotationTable({ data, deleteByIndex, clearAll }) {
 
   return (
     <Container>
-      <Box display="flex" justifyContent="space-between" alignItems="center" mb={2}>
-        <Typography variant="h4" sx={{ color: "black" }}>
+      <Box mb={2}>
+        <Typography variant="h4" sx={{ color: "black", mb: 1 }}>
           Quotation
         </Typography>
         <Button
@@ -63,12 +63,12 @@ function QuotationTable({ data, deleteByIndex, clearAll }) {
         <Table>
           <TableHead>
             <TableRow>
-              <TableCell align="center">-</TableCell>
-              <TableCell align="center">Qty</TableCell>
-              <TableCell>Item</TableCell>
-              <TableCell align="center">Price/Unit</TableCell>
-              <TableCell align="center">Discount</TableCell>
-              <TableCell align="right">Amount</TableCell>
+              <TableCell align="center" sx={{ border: '1px solid #ccc' }}>-</TableCell>
+              <TableCell align="center" sx={{ border: '1px solid #ccc' }}>Qty</TableCell>
+              <TableCell sx={{ border: '1px solid #ccc' }}>Item</TableCell>
+              <TableCell align="center" sx={{ border: '1px solid #ccc' }}>Price/Unit</TableCell>
+              <TableCell align="center" sx={{ border: '1px solid #ccc' }}>Discount</TableCell>
+              <TableCell align="right" sx={{ border: '1px solid #ccc' }}>Amount</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
@@ -80,32 +80,32 @@ function QuotationTable({ data, deleteByIndex, clearAll }) {
 
               return (
                 <TableRow key={i}>
-                  <TableCell align="center">
+                  <TableCell align="center" sx={{ border: '1px solid #ccc' }}>
                     <IconButton onClick={() => deleteByIndex(i)} color="error" size="small">
                       <Delete />
                     </IconButton>
                   </TableCell>
-                  <TableCell align="center">{qty}</TableCell>
-                  <TableCell>{v.item}</TableCell>
-                  <TableCell align="center">{ppu.toFixed(2)}</TableCell>
-                  <TableCell align="center">{discount.toFixed(2)}</TableCell>
-                  <TableCell align="right">{amount.toFixed(2)}</TableCell>
+                  <TableCell align="center" sx={{ border: '1px solid #ccc' }}>{qty}</TableCell>
+                  <TableCell sx={{ border: '1px solid #ccc' }}>{v.item}</TableCell>
+                  <TableCell align="center" sx={{ border: '1px solid #ccc' }}>{ppu.toFixed(2)}</TableCell>
+                  <TableCell align="center" sx={{ border: '1px solid #ccc' }}>{discount.toFixed(2)}</TableCell>
+                  <TableCell align="right" sx={{ border: '1px solid #ccc' }}>{amount.toFixed(2)}</TableCell>
                 </TableRow>
               );
             })}
           </TableBody>
           <TableFooter>
             <TableRow>
-              <TableCell colSpan={5} align="right">
+              <TableCell colSpan={5} align="right" sx={{ border: '1px solid #ccc' }}>
                 Total Discount
               </TableCell>
-              <TableCell align="right">{totalDiscount.toFixed(2)}</TableCell>
+              <TableCell align="right" sx={{ border: '1px solid #ccc' }}>{totalDiscount.toFixed(2)}</TableCell>
             </TableRow>
             <TableRow>
-              <TableCell colSpan={5} align="right">
+              <TableCell colSpan={5} align="right" sx={{ border: '1px solid #ccc' }}>
                 Total
               </TableCell>
-              <TableCell align="right">{totalAmount.toFixed(2)}</TableCell>
+              <TableCell align="right" sx={{ border: '1px solid #ccc' }}>{totalAmount.toFixed(2)}</TableCell>
             </TableRow>
           </TableFooter>
         </Table>
